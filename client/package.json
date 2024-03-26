@@ -33,6 +33,7 @@
     "blk-design-system-react"
   ],
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@lottiefiles/react-lottie-player": "^3.5.3",
@@ -54,6 +55,7 @@
     "react-hook-form": "^7.51.1",
     "react-router-dom": "6.11.1",
     "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.5",
     "reactstrap": "8.10.0",
     "sass": "1.62.1",
     "web-vitals": "3.3.1"

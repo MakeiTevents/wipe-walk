@@ -15,11 +15,12 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 // react plugin used to create charts
 import { Line } from "react-chartjs-2";
 import classnames from "classnames";
 import { Player } from "@lottiefiles/react-lottie-player";
+import emailjs from "@emailjs/browser";
 // reactstrap components
 import {
   Button,
@@ -55,6 +56,11 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
+import FormControl from "@mui/material/FormControl";
+import NativeSelect from "@mui/material/NativeSelect";
+import InputLabel from "@mui/material/InputLabel";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 import bigChartData from "variables/charts.js";
 
@@ -74,8 +80,51 @@ export default function LandingPage(args) {
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [passwordFocus, setPasswordFocus] = React.useState(false);
   const loc = JSON.parse(localStorage.getItem("userInfo"));
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [service, setService] = useState("");
+
+  const handleChange3 = (event) => {
+    event.preventDefault();
+    setService(event.target.value);
+  };
 
   const toggle = () => setModal(!modal);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = "service_hu4yzrp";
+    const templateId = "template_jyuuocz";
+    const publicKey = "zz1TgSrkKQUci0wOI";
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      from_phone: phone,
+      from_address: address,
+      from_service: service,
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey).then(
+      (response) => {
+        console.log("SUCCESS!", response);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setAddress("");
+        setService("");
+        toast("Your Order is Placed !!", {
+          position: toast.POSITION?.TOP_RIGHT,
+        });
+      },
+      (error) => {
+        console.log("FAILED...", error.text);
+      }
+    );
+  };
 
   return (
     <>
@@ -98,18 +147,28 @@ export default function LandingPage(args) {
               <div className="text-center text-muted mb-4 mt-3">
                 <small></small>
               </div>
-              <Form>
+              <Form onSubmit={handleSubmit}>
                 <Row>
                   <Col md="6">
                     <FormGroup>
                       <label>Your Name</label>
-                      <Input placeholder="name" type="text" />
+                      <Input
+                        placeholder="name"
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
                     </FormGroup>
                   </Col>
                   <Col md="6">
                     <FormGroup>
                       <label>Email address</label>
-                      <Input placeholder="email" type="email" />
+                      <Input
+                        placeholder="email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
                     </FormGroup>
                   </Col>
                 </Row>
@@ -117,70 +176,47 @@ export default function LandingPage(args) {
                   <Col md="6">
                     <FormGroup>
                       <label>Phone</label>
-                      <Input placeholder="phone" type="text" />
+                      <Input
+                        placeholder="phone"
+                        type="text"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                      />
                     </FormGroup>
                   </Col>
                   <Col md="6">
                     <FormGroup>
                       <label>Address</label>
-                      <Input placeholder="address" type="text" />
+                      <Input
+                        placeholder="address"
+                        type="text"
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                      />
                     </FormGroup>
                   </Col>
                 </Row>
                 <Row>
                   <Col md="12">
-                  <UncontrolledDropdown>
-                        <DropdownToggle
-                          aria-expanded={false}
-                          aria-haspopup={true}
-                          caret
-                          color="default"
-                          data-toggle="dropdown"
-                          href="http://example.com"
-                          id="navbarDropdownMenuLink"
-                          nav
-                        >
-                          <p>Service</p>
-                        </DropdownToggle>
-                        <DropdownMenu aria-labelledby="navbarDropdownMenuLink" style={{marginLeft:"5rem", marginTop:"-3.5rem"}}>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Cleaning
-                          </DropdownItem>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Polishing
-                          </DropdownItem>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Sole Replace
-                          </DropdownItem>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Innersole Replace
-                          </DropdownItem>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Base Replace
-                          </DropdownItem>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Stitching
-                          </DropdownItem>
-                        </DropdownMenu>
-                      </UncontrolledDropdown>
+                    <FormGroup>
+                      <label>service</label>
+                      <br/>
+                      <NativeSelect
+                        id="demo-customized-select-native"
+                        value={service}
+                        onChange={handleChange3}
+                        label="service"
+                        style={{color:"grey"}}
+                      >
+                        <option aria-label="None" value="" />
+                        <option>Cleaning</option>
+                        <option>Polishing</option>
+                        <option>Sole Replace</option>
+                        <option>Innersole Replace</option>
+                        <option>Base Replace</option>
+                        <option>Stitching</option>
+                      </NativeSelect>
+                    </FormGroup>
                   </Col>
                 </Row>
                 <Button
@@ -188,7 +224,8 @@ export default function LandingPage(args) {
                   color="primary"
                   data-placement="right"
                   id="tooltip341148792"
-                  type="button"
+                  type="submit"
+                  onClick={() => setFormModal(false)}
                 >
                   Order Now
                 </Button>
@@ -232,6 +269,7 @@ export default function LandingPage(args) {
           </div>
         )}
       </Modal>
+      <ToastContainer />
       <ExamplesNavbar />
       <div className="wrapper">
         <div className="page-header">

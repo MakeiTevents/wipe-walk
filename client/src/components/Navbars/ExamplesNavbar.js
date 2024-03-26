@@ -211,7 +211,7 @@ export default function ExamplesNavbar() {
               color="primary" style={{cursor:"none"}}>
                 Welcome {loc.name}
                   </Button>
-                <Button color="danger" onClick={() => setFormModal(true)}>
+                <Button color="danger" className="btn-round" onClick={() => setFormModal(true)}>
                 Logout
                   </Button>
               </div>
