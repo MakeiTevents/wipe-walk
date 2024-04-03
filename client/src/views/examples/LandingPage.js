@@ -60,7 +60,7 @@ import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import InputLabel from "@mui/material/InputLabel";
 import { toast, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 import bigChartData from "variables/charts.js";
 
@@ -200,13 +200,13 @@ export default function LandingPage(args) {
                   <Col md="12">
                     <FormGroup>
                       <label>service</label>
-                      <br/>
+                      <br />
                       <NativeSelect
                         id="demo-customized-select-native"
                         value={service}
                         onChange={handleChange3}
                         label="service"
-                        style={{color:"grey"}}
+                        style={{ color: "grey" }}
                       >
                         <option aria-label="None" value="" />
                         <option>Cleaning</option>
@@ -369,7 +369,7 @@ export default function LandingPage(args) {
               </Col>
               <Col lg="4" md="5">
                 <Player
-                  src="https://assets1.lottiefiles.com/packages/lf20_myejiggj.json"
+                  src="https://lottie.host/555cf204-3d7b-4b86-8438-2bc2abd72337/1fThwypjbD.json"
                   className="player"
                   loop
                   autoplay
@@ -388,90 +388,12 @@ export default function LandingPage(args) {
             <Container>
               <Row className="row-grid justify-content-between">
                 <Col className="mt-lg-5" md="5">
-                  <Row>
-                    <Col className="px-2 py-2" lg="6" sm="12">
-                      <Card className="card-stats">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <i className="tim-icons icon-trophy text-warning" />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle tag="p">3,237</CardTitle>
-                                <p />
-                                <p className="card-category">Awards</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col className="px-2 py-2" lg="6" sm="12">
-                      <Card className="card-stats upper bg-default">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <i className="tim-icons icon-coins text-white" />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle tag="p">3,653</CardTitle>
-                                <p />
-                                <p className="card-category">Commits</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="px-2 py-2" lg="6" sm="12">
-                      <Card className="card-stats">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <i className="tim-icons icon-gift-2 text-info" />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle tag="p">593</CardTitle>
-                                <p />
-                                <p className="card-category">Presents</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col className="px-2 py-2" lg="6" sm="12">
-                      <Card className="card-stats">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <i className="tim-icons icon-credit-card text-success" />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle tag="p">10,783</CardTitle>
-                                <p />
-                                <p className="card-category">Forks</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  </Row>
+                <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/about one.webp")}
+                      style={{marginTop:"-3rem", marginBottom:"2rem"}}
+                    />
                 </Col>
                 <Col md="6">
                   <div className="pl-md-5">
@@ -523,7 +445,8 @@ export default function LandingPage(args) {
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-primary">
-                        <i className="tim-icons icon-money-coins" />
+                        {/* <i className="tim-icons icon-money-coins" /> */}
+                        <img src="asset/img/cleaning.png" alt="" />
                       </div>
                       <h4 className="info-title">Cleaning</h4>
                       <hr className="line-primary" />
@@ -533,7 +456,7 @@ export default function LandingPage(args) {
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-warning">
-                        <i className="tim-icons icon-chart-pie-36" />
+                        {/* <i className="tim-icons icon-chart-pie-36" /> */}
                       </div>
                       <h4 className="info-title">Polishing</h4>
                       <hr className="line-warning" />
@@ -543,7 +466,7 @@ export default function LandingPage(args) {
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-success">
-                        <i className="tim-icons icon-single-02" />
+                        {/* <i className="tim-icons icon-single-02" /> */}
                       </div>
                       <h4 className="info-title">Sole Replace</h4>
                       <hr className="line-success" />
@@ -555,7 +478,7 @@ export default function LandingPage(args) {
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-primary">
-                        <i className="tim-icons icon-money-coins" />
+                        {/* <i className="tim-icons icon-money-coins" /> */}
                       </div>
                       <h4 className="info-title">Innersole Replace</h4>
                       <hr className="line-primary" />
@@ -565,7 +488,7 @@ export default function LandingPage(args) {
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-warning">
-                        <i className="tim-icons icon-chart-pie-36" />
+                        {/* <i className="tim-icons icon-chart-pie-36" /> */}
                       </div>
                       <h4 className="info-title">Base Replace</h4>
                       <hr className="line-warning" />
@@ -575,7 +498,7 @@ export default function LandingPage(args) {
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-success">
-                        <i className="tim-icons icon-single-02" />
+                        {/* <i className="tim-icons icon-single-02" /> */}
                       </div>
                       <h4 className="info-title">Stitching</h4>
                       <hr className="line-success" />
@@ -587,7 +510,10 @@ export default function LandingPage(args) {
             </Row>
           </Container>
         </section>
-        <section className="section section-lg section-coins">
+        <section
+          className="section section-lg section-coins"
+          style={{ marginTop: "100px" }}
+        >
           <img
             alt="..."
             className="path"
@@ -598,106 +524,253 @@ export default function LandingPage(args) {
               <Col md="4">
                 <hr className="line-info" />
                 <h1>
-                  Choose the pricing{" "}
-                  <span className="text-info">that fits your needs</span>
+                  Pricing <span className="text-info"> fits your needs</span>
                 </h1>
               </Col>
             </Row>
             <Row>
-              <Col md="4">
+              <Col md="4" style={{ marginBottom: "5rem" }}>
                 <Card className="card-coin card-plain">
                   <CardHeader>
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/bitcoin.png")}
+                      src={require("assets/img/Catalog item icon_Action_20210128114359616.png")}
                     />
                   </CardHeader>
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Light Coin</h4>
-                        <span>Plan</span>
+                        <h4 className="text-uppercase">Shoe – Canvas/Sports</h4>
+                        {/* <span>Plan</span> */}
                         <hr className="line-primary" />
                       </Col>
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem>50 messages</ListGroupItem>
-                        <ListGroupItem>100 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
+                        <ListGroupItem>₹ 275</ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
+                  {/* <CardFooter className="text-center">
                     <Button className="btn-simple" color="primary">
                       Get plan
                     </Button>
-                  </CardFooter>
+                  </CardFooter> */}
                 </Card>
               </Col>
-              <Col md="4">
+              <Col md="4" style={{ marginBottom: "5rem" }}>
                 <Card className="card-coin card-plain">
                   <CardHeader>
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/etherum.png")}
+                      src={require("assets/img/Catalog item icon_wash and fold_20210128114348337.png")}
                     />
                   </CardHeader>
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Dark Coin</h4>
-                        <span>Plan</span>
+                        <h4 className="text-uppercase">Shoe – Boots</h4>
+                        {/* <span>Plan</span> */}
                         <hr className="line-success" />
                       </Col>
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem>150 messages</ListGroupItem>
-                        <ListGroupItem>1000 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
+                        <ListGroupItem>₹ 475</ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
+                  {/* <CardFooter className="text-center">
                     <Button className="btn-simple" color="success">
                       Get plan
                     </Button>
-                  </CardFooter>
+                  </CardFooter> */}
                 </Card>
               </Col>
-              <Col md="4">
+              <Col md="4" style={{ marginBottom: "5rem" }}>
                 <Card className="card-coin card-plain">
                   <CardHeader>
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/ripp.png")}
+                      src={require("assets/img/Catalog item icon_wash and iron_20210128114408309.png")}
                     />
                   </CardHeader>
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Bright Coin</h4>
-                        <span>Plan</span>
+                        <h4 className="text-uppercase">
+                          Shoe – Leather/Formal
+                        </h4>
+                        {/* <span>Plan</span> */}
                         <hr className="line-info" />
                       </Col>
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem>350 messages</ListGroupItem>
-                        <ListGroupItem>10K emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
+                        <ListGroupItem>₹ 375</ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
+                  {/* <CardFooter className="text-center">
                     <Button className="btn-simple" color="info">
                       Get plan
                     </Button>
-                  </CardFooter>
+                  </CardFooter> */}
+                </Card>
+              </Col>
+              <Col md="4" style={{ marginBottom: "5rem" }}>
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/Riding-Boots_20220111111405351.png")}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Shoe – Riding</h4>
+                        {/* <span>Plan</span> */}
+                        <hr className="line-primary" />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem>₹ 550</ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                  {/* <CardFooter className="text-center">
+                    <Button className="btn-simple" color="info">
+                      Get plan
+                    </Button>
+                  </CardFooter> */}
+                </Card>
+              </Col>
+              <Col md="4" style={{ marginBottom: "5rem" }}>
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/calf-boots_20220111111424844.png")}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Calf Boots</h4>
+                        {/* <span>Plan</span> */}
+                        <hr className="line-success" />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem>₹ 499</ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                  {/* <CardFooter className="text-center">
+                    <Button className="btn-simple" color="info">
+                      Get plan
+                    </Button>
+                  </CardFooter> */}
+                </Card>
+              </Col>
+              <Col md="4" style={{ marginBottom: "5rem" }}>
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/heels.png")}
+                      style={{ width: "11rem" }}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Heels</h4>
+                        {/* <span>Plan</span> */}
+                        <hr className="line-info" />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem>₹ 325</ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                  {/* <CardFooter className="text-center">
+                    <Button className="btn-simple" color="info">
+                      Get plan
+                    </Button>
+                  </CardFooter> */}
+                </Card>
+              </Col>
+              <Col md="4" style={{ marginBottom: "5rem" }}>
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/logan-over-the-knee-boots-gedebe.jpg")}
+                      style={{ width: "10rem" }}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">High Boots</h4>
+                        {/* <span>Plan</span> */}
+                        <hr className="line-primary" />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem>₹ 550</ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                  {/* <CardFooter className="text-center">
+                    <Button className="btn-simple" color="info">
+                      Get plan
+                    </Button>
+                  </CardFooter> */}
+                </Card>
+              </Col>
+              <Col md="4" style={{ marginBottom: "5rem" }}>
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/Purple_Flower_Sandals.webp")}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Sandles</h4>
+                        {/* <span>Plan</span> */}
+                        <hr className="line-success" />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem>₹ 225</ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                  {/* <CardFooter className="text-center">
+                    <Button className="btn-simple" color="info">
+                      Get plan
+                    </Button>
+                  </CardFooter> */}
                 </Card>
               </Col>
             </Row>
