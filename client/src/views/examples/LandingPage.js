@@ -21,6 +21,7 @@ import { Line } from "react-chartjs-2";
 import classnames from "classnames";
 import { Player } from "@lottiefiles/react-lottie-player";
 import emailjs from "@emailjs/browser";
+import "./landingPage.css"
 // reactstrap components
 import {
   Button,
@@ -446,7 +447,12 @@ export default function LandingPage(args) {
                     <div className="info">
                       <div className="icon icon-primary">
                         {/* <i className="tim-icons icon-money-coins" /> */}
-                        <img src="asset/img/cleaning.png" alt="" />
+                        <img
+                      alt="..."
+                      className="img-fluid"
+                      src={require("assets/img/cleaning.png")}
+                      style={{width:"80px",     background: "antiquewhite"}}
+                    />
                       </div>
                       <h4 className="info-title">Cleaning</h4>
                       <hr className="line-primary" />
@@ -457,6 +463,13 @@ export default function LandingPage(args) {
                     <div className="info">
                       <div className="icon icon-warning">
                         {/* <i className="tim-icons icon-chart-pie-36" /> */}
+                        <img
+                      alt="..."
+                      className="img-fluid"
+                      src={require("assets/img/shoe polishing.png")}
+                      style={{width:"80px",     background: "antiquewhite"}}
+
+                    />
                       </div>
                       <h4 className="info-title">Polishing</h4>
                       <hr className="line-warning" />
@@ -467,6 +480,13 @@ export default function LandingPage(args) {
                     <div className="info">
                       <div className="icon icon-success">
                         {/* <i className="tim-icons icon-single-02" /> */}
+                        <img
+                      alt="..."
+                      className="img-fluid"
+                      src={require("assets/img/Sole Replace.webp")}
+                      style={{width:"80px",     background: "antiquewhite"}}
+
+                    />
                       </div>
                       <h4 className="info-title">Sole Replace</h4>
                       <hr className="line-success" />
@@ -479,6 +499,13 @@ export default function LandingPage(args) {
                     <div className="info">
                       <div className="icon icon-primary">
                         {/* <i className="tim-icons icon-money-coins" /> */}
+                        <img
+                      alt="..."
+                      className="img-fluid"
+                      src={require("assets/img/Innersole Replace.webp")}
+                      style={{width:"80px",     background: "antiquewhite"}}
+
+                    />
                       </div>
                       <h4 className="info-title">Innersole Replace</h4>
                       <hr className="line-primary" />
@@ -489,6 +516,13 @@ export default function LandingPage(args) {
                     <div className="info">
                       <div className="icon icon-warning">
                         {/* <i className="tim-icons icon-chart-pie-36" /> */}
+                        <img
+                      alt="..."
+                      className="img-fluid"
+                      src={require("assets/img/base replace.png")}
+                      style={{width:"80px",     background: "antiquewhite"}}
+
+                    />
                       </div>
                       <h4 className="info-title">Base Replace</h4>
                       <hr className="line-warning" />
@@ -499,6 +533,13 @@ export default function LandingPage(args) {
                     <div className="info">
                       <div className="icon icon-success">
                         {/* <i className="tim-icons icon-single-02" /> */}
+                        <img
+                      alt="..."
+                      className="img-fluid"
+                      src={require("assets/img/Stitching.webp")}
+                      style={{width:"80px", background: "antiquewhite"}}
+
+                    />
                       </div>
                       <h4 className="info-title">Stitching</h4>
                       <hr className="line-success" />

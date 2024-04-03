@@ -34,10 +34,10 @@ export default function Footer() {
     <footer className="footer">
       <Container>
         <Row>
-          <Col md="3">
+          <Col md="6">
             <h1 className="title">Wipe Walk</h1>
           </Col>
-          <Col md="3">
+          <Col md="6">
             <Nav>
               <NavItem>
                 <NavLink to="/" tag={Link}>
@@ -85,7 +85,7 @@ export default function Footer() {
               </NavItem>
             </Nav>
           </Col> */}
-          <Col md="3">
+          {/* <Col md="3">
             <h3 className="title">Follow us:</h3>
             <div className="btn-wrapper profile">
               <Button
@@ -125,7 +125,7 @@ export default function Footer() {
                 Follow us
               </UncontrolledTooltip>
             </div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </footer>
