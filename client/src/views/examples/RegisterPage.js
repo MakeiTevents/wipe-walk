@@ -8,6 +8,7 @@ import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import classnames from "classnames";
+import ErrorMessage from "./ErrorMessage";
 // reactstrap components
 import {
   Button,
@@ -251,6 +252,8 @@ export default function RegisterPage() {
                       </Button>
                     </CardFooter>
                       </Form> */}
+                      {error && <ErrorMessage>{error}</ErrorMessage>}
+
                       <Box
                         component="form"
                         noValidate
